@@ -3,7 +3,6 @@
     <div class="page">
       <div class="contenu">
         <NavBar />
-
         <div class="container1">
           <HomePage />
         </div>
@@ -85,15 +84,11 @@ body {
 
 ::-webkit-scrollbar {
   width: 0px;
-  /* remove scrollbar space */
   background: transparent;
-  /* optional: just make scrollbar invisible */
 }
 
 ::-moz-scrollbar {
   width: 0px;
-  /* remove scrollbar space */
   background: transparent;
-  /* optional: just make scrollbar invisible */
 }
 </style>

@@ -4,7 +4,8 @@
       <div class="text"><v-typical class="blink"
           :steps="['Hello 👋,', 3000, 'Bonjour 👋,', 3000, 'Hallo 👋,', 3000, 'Holà 👋,', 3000, 'おはよう 👋,', 3000]" :loop="Infinity"
           :wrapper="'p'"></v-typical>
-        <p>And welcome on </p>
+        <p>I'm <span class="name">Lucas</span></p>
+        <p>welcome on </p>
         <p>my personal website</p>
       </div>
       <img class="image" src="../images/man.svg" alt="Image">
@@ -62,6 +63,12 @@ export default {
 
 p {
   margin: 0;
+}
+
+p:nth-child(2) span {
+  text-decoration: none;
+  box-shadow: inset 0 -.5em 0 #FDC830;
+  color: inherit;
 }
 
 .custom-shape-divider-bottom-1674134076 {
