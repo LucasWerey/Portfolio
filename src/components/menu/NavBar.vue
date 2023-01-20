@@ -1,7 +1,7 @@
 <template>
     <div class="Nav">
         <div class="Top">
-            <div class="log">Logo</div>
+            <div class="log"><img src="../../images/logoSite.svg" alt="logo" /> </div>
             <ul class="menu">
                 <div class="menu-indicator"></div>
                 <li class="menu-item" v-for="link in links" :key="link.id">
@@ -115,6 +115,9 @@ export default {
     text-decoration-style: wavy;
 }
 
+.menu-link span {
+    font-size: 2em;
+}
 .Burger {
     display: none;
 }

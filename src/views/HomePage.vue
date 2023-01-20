@@ -2,7 +2,7 @@
   <div class="page" style="height: 100vh;">
     <div class="center-content">
       <div class="text"><v-typical class="blink"
-          :steps="['Hello,', 3000, 'Bonjour 👋,', 3000, 'Hallo,', 3000, 'Holà,', 3000, 'おはよう,', 3000]" :loop="Infinity"
+          :steps="['Hello 👋,', 3000, 'Bonjour 👋,', 3000, 'Hallo 👋,', 3000, 'Holà 👋,', 3000, 'おはよう 👋,', 3000]" :loop="Infinity"
           :wrapper="'p'"></v-typical>
         <p>And welcome on </p>
         <p>my personal website</p>

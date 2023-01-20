@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" style="height:100vh">
     <h1 class="title">My Projects</h1>
     <div class="grid">
       <div class="card" v-for="(card, index) in cards" :key="index">
@@ -18,8 +18,12 @@
         </div>
       </div>
     </div>
+    <div class="custom-shape-divider-bottom-1674172921">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" class="shape-fill"></path>
+    </svg>
+</div>
   </div>
-
 </template>
 
 <script>
@@ -29,7 +33,7 @@ export default {
       cards: [
         { text: "Projet de création d'un dashboard autour de la SNCF grâce aux données de l’API Data-SNCF", image: "Dashboard.b493d4a9.png", alt: "Image Dashboard", titre: "Dashboard SNCF", link: "https://dashboardlucaswerey.netlify.app/", stack: ["icons8-mongodb.7d4f7146.svg", "icons8-express-js.cc24394d.svg", "icons8-react.098ccd82.svg", "icons8-node-js.26176163.svg"] },
         { text: "Projet de prototypage d'une application sur Figma", image: "LogoFreshcook.cc48dbc9.svg", alt: "Image Freshcook", titre: "Freshcook", link: "https://www.figma.com/proto/UjllwNPgwFAxsN9tRPEaAw/Projet-UI---Freshcook?page-id=116%3A247&node-id=118%3A1683&viewport=1007%2C264%2C0.07&scaling=scale-down&starting-point-node-id=116%3A248", stack: ["icons8-figma.5d7330fe.svg"] },
-        { text: "Projet de création d'un site de prise de rendez-vous médicaux", image: "OmnesSante.8e64e231.png", alt: "Image 5", titre: "Omnes Santé", link: "", stack: ["icons8-html-5.964cf5a7.svg", "icons8-css3.fdf257b7.svg", "icons8-javascript-logo.17196e9c.svg", "icons8-php-logo.6bb294f9.svg", "xml-svgrepo-com.1b6818d9.svg"] }
+        { text: "Projet de création d'un site de prise de rendez-vous médicaux", image: "OmnesSante.8e64e231.png", alt: "OmnesSanté", titre: "Omnes Santé", link: "", stack: ["icons8-html-5.964cf5a7.svg", "icons8-css3.fdf257b7.svg", "icons8-javascript-logo.17196e9c.svg", "icons8-php-logo.6bb294f9.svg", "xml-svgrepo-com.1b6818d9.svg"] }
       ]
     }
   }
@@ -40,8 +44,7 @@ export default {
 .container {
   display: flex;
   flex-wrap: wrap;
-
-  height: 100vh;
+  height: 100%;
   width: 50%;
   margin: auto;
 }
@@ -51,7 +54,7 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   width: 100%;
-  height: 75%;
+  height: 85%;
 }
 
 @media (max-width: 600px) {
@@ -146,5 +149,26 @@ export default {
   width: 30px;
   height: 30px;
   margin: 5px;
+}
+
+.custom-shape-divider-bottom-1674172921 {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1674172921 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 115px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1674172921 .shape-fill {
+    fill: #FDC830;
 }
 </style>
