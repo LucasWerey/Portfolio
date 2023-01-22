@@ -32,9 +32,10 @@ import BurgerMenu from './BurgerMenu.vue'
 import SlideBar from './SlideBar.vue'
 
 export default {
+ 
     components: {
         BurgerMenu,
-        SlideBar
+        SlideBar,
     },
     data() {
         return {
@@ -51,12 +52,12 @@ export default {
                 id: 3,
                 text: 'Skills'
             },
-            {
+          /*  {
                 id: 4,
                 text: 'Contact'
-            },],
+            },*/],
         }
-    }
+    },
 }
 </script>
 

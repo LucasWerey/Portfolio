@@ -1,5 +1,8 @@
 <template>
     <div class="container">
+        <div class="Title">
+            <h1>My Technologies</h1>
+        </div>
         <div class="Skills">
             <div class="buttonContainer">
                 <div class="buttonGrid">
@@ -14,7 +17,7 @@
                 </div>
             </div>
             <div v-if="grid === 1" :class="gridClass" class="grid-container">
-                <div v-for="image in front" :key="image.src">
+                <div v-for="image in front" :key="image.src" class="imageSkills">
                     <img :src="`../img/${image.src}`" :alt="image.alt" />
                 </div>
             </div>
@@ -55,7 +58,7 @@ export default {
                 { src: "mysql-official.de99ad87.svg", alt: "mysql" },
                 { src: "icons8-mongodb.7d4f7146.svg", alt: "mongodb" },
                 { src: "icons8-node-js.26176163.svg", alt: "nodejs" },
-                { src: "icons8-express-js.cc24394d.svg", alt:"expressjs"}
+                { src: "icons8-express-js.cc24394d.svg", alt: "expressjs" }
             ],
 
             design: [
@@ -77,11 +80,29 @@ export default {
 
 <style scoped>
 .container {
-    height: 100vh;
+    height: 70vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.Title {
+    width: 50%;
+    height: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    top: 0;
+    padding-bottom: 4%;
+}
+
+.Title h1 {
+    text-align: left;
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
 }
 
 .Skills {
@@ -171,10 +192,44 @@ export default {
     border-right: rgb(0, 0, 0) 2px solid;
 }
 
+.imageSkills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 img {
     width: 100px;
     height: 100px;
     margin: 5px;
+}
+
+img:hover {
+    animation-duration: 0.4s;
+    animation-name: logo;
+    animation-iteration-count: 1;
+}
+
+@keyframes logo {
+    from {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(30deg);
+    }
+
+    50% {
+        transform: rotate(-30deg);
+    }
+
+    75% {
+        transform: rotate(30deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
 
 }
 </style>

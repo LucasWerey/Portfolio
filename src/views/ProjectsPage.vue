@@ -8,7 +8,7 @@
           <h2 class="body-title">{{ card.titre }}</h2>
           <p class="card-text">{{ card.text }}</p>
         </div>
-        <a class="card-button" :href="`${card.link}`" target="_blank">
+        <a :class="`card-button ${card.disabled}`" :href="`${card.link}`" target="_blank">
           <p>Discover !</p>
         </a>
         <div class="card-footer">
@@ -31,9 +31,9 @@ export default {
   data() {
     return {
       cards: [
-        { text: "Projet de création d'un dashboard autour de la SNCF grâce aux données de l’API Data-SNCF", image: "Dashboard.b493d4a9.png", alt: "Image Dashboard", titre: "Dashboard SNCF", link: "https://dashboardlucaswerey.netlify.app/", stack: ["icons8-mongodb.7d4f7146.svg", "icons8-express-js.cc24394d.svg", "icons8-react.098ccd82.svg", "icons8-node-js.26176163.svg"] },
-        { text: "Projet de prototypage d'une application sur Figma", image: "LogoFreshcook.cc48dbc9.svg", alt: "Image Freshcook", titre: "Freshcook", link: "https://www.figma.com/proto/UjllwNPgwFAxsN9tRPEaAw/Projet-UI---Freshcook?page-id=116%3A247&node-id=118%3A1683&viewport=1007%2C264%2C0.07&scaling=scale-down&starting-point-node-id=116%3A248", stack: ["icons8-figma.5d7330fe.svg"] },
-        { text: "Projet de création d'un site de prise de rendez-vous médicaux", image: "OmnesSante.8e64e231.png", alt: "OmnesSanté", titre: "Omnes Santé", link: "", stack: ["icons8-html-5.964cf5a7.svg", "icons8-css3.fdf257b7.svg", "icons8-javascript-logo.17196e9c.svg", "icons8-php-logo.6bb294f9.svg", "xml-svgrepo-com.1b6818d9.svg"] }
+        { text: "Project to create a dashboard about the SNCF with the Data-SNCF API data", image: "Dashboard.b493d4a9.png", alt: "Image Dashboard", titre: "Dashboard SNCF", link: "https://dashboardlucaswerey.netlify.app/", stack: ["icons8-mongodb.7d4f7146.svg", "icons8-express-js.cc24394d.svg", "icons8-react.098ccd82.svg", "icons8-node-js.26176163.svg"], disabled:"false" },
+        { text: "Prototyping project of a food delivery application on Figma", image: "LogoFreshcook.cc48dbc9.svg", alt: "Image Freshcook", titre: "Freshcook", link: "https://www.figma.com/proto/UjllwNPgwFAxsN9tRPEaAw/Projet-UI---Freshcook?page-id=116%3A247&node-id=118%3A1683&viewport=1007%2C264%2C0.07&scaling=scale-down&starting-point-node-id=116%3A248", stack: ["icons8-figma.5d7330fe.svg"], disabled:"false" },
+        { text: "Project for the creation of a website for medical appointments", image: "OmnesSante.8e64e231.png", alt: "OmnesSanté", titre: "Omnes Santé", link: "", stack: ["icons8-html-5.964cf5a7.svg", "icons8-css3.fdf257b7.svg", "icons8-javascript-logo.17196e9c.svg", "icons8-php-logo.6bb294f9.svg", "xml-svgrepo-com.1b6818d9.svg"], disabled:"disabled" }
       ]
     }
   }
@@ -54,17 +54,28 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   width: 100%;
-  height: 85%;
+  height: fit-content;
+  margin-top:-20%;
 }
 
-@media (max-width: 600px) {
+.grid .card:hover{
+  opacity: 1;
+  scale: 1.1;
+  transition: scale 0.5s ease;
+}
+
+.grid:hover > :not(:hover){
+  opacity: .5;
+}
+
+@media (width <= 600px) {
   .grid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
 }
 
-@media (600px <= width <= 1100px ){
+@media (600px <= width <= 1300px ){
   .grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -95,6 +106,7 @@ export default {
   background-color: #fff;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 
 .card-img-top {
   width: 100%;
@@ -133,8 +145,13 @@ export default {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.disabled {
+  background-color: #f3743588;
+  pointer-events: none;
+}
 .card-button p {
   margin: 0;
 }

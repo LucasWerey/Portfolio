@@ -10,11 +10,12 @@
           <ProjectsPage />
         </div>
         <div class="container3">
-        <SkillsPage />
+          <SkillsPage />
         </div>
       </div>
       <FooterBar />
     </div>
+    <ButtonUp />
   </div>
 </template>
 
@@ -24,6 +25,7 @@ import HomePage from './views/HomePage.vue'
 import ProjectsPage from './views/ProjectsPage.vue'
 import FooterBar from './components/footer/FooterBar.vue'
 import SkillsPage from './views/SkillsPage.vue'
+import ButtonUp from './components/ButtonUp.vue'
 
 export default {
   name: 'App',
@@ -32,7 +34,8 @@ export default {
     HomePage,
     ProjectsPage,
     FooterBar,
-    SkillsPage
+    SkillsPage,
+    ButtonUp,
   }
 }
 </script>
@@ -77,9 +80,9 @@ body {
 
 .container3 {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   background: #FDC830;
-  margin-top : -10px;
+  margin-top: -1px;
 }
 
 ::-webkit-scrollbar {
@@ -91,4 +94,8 @@ body {
   width: 0px;
   background: transparent;
 }
+
+
+  
+
 </style>

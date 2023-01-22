@@ -1,12 +1,17 @@
 <template>
   <div class="footerCompo">
-    <div class="separator"></div>
     <footer>
-      <p>Ce portfolio a été réalisé par Lucas WEREY @2023</p>
+      <div class="Text">
+        <p></p>
+        <p>Created by <a href="https://www.linkedin.com/in/lucaswerey/" target="_blank">Lucas WEREY</a> @2023</p>
+       <p></p>
+      </div>
     </footer>
+    
   </div>
 </template>
-  
+
+
 
 <style scoped>
 footer {
@@ -19,22 +24,26 @@ footer {
   justify-content: center;
 }
 
-.separator {
-  background-color: rgb(255, 255, 255);
-  width: 25%;
-  height: 2px;
-  margin-top: 150px;
-}
 
 .footerCompo {
-  display: flex;
-  flex-direction: column;
   width: 100%;
 }
 
-p {
+.Text {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+p,
+a {
   font-size: 20px;
   color: #fff;
   font-weight: bold;
 }
+
+a {
+  text-underline-offset: 5px;
+}
+
 </style>
