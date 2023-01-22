@@ -8,7 +8,7 @@
           <h2 class="body-title">{{ card.titre }}</h2>
           <p class="card-text">{{ card.text }}</p>
         </div>
-        <a :class="`card-button ${card.disabled}`" :href="`${card.link}`" target="_blank">
+        <a :class="`card-button ${card.disabled} pointer`" :href="`${card.link}`" target="_blank">
           <p>Discover !</p>
         </a>
         <div class="card-footer">
@@ -68,20 +68,6 @@ export default {
   opacity: .5;
 }
 
-@media (width <= 600px) {
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-}
-
-@media (600px <= width <= 1300px ){
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-}
-
 
 .title {
   text-align: left;
@@ -114,6 +100,7 @@ export default {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
   filter: blur(0.2px);
+  overflow: hidden;
 }
 
 .card-body {
@@ -195,4 +182,37 @@ export default {
 .custom-shape-divider-bottom-1674172921 .shape-fill {
     fill: #FDC830;
 }
+
+@media (width <= 600px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (600px <= width <= 1300px ){
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+ .grid .card {
+    width: 200px;
+    height: 400px;
+  }
+
+  .grid .card .card-body{
+    font-size: small;
+  }
+
+  .grid .card .card-button{
+    top:38%;
+  }
+
+  .grid .card .card-img-top{
+    height: 100px;
+  }
+}
+
+
 </style>

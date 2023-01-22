@@ -24,7 +24,6 @@ export default {
 <style>
 .slidebar-panel {
     position: fixed;
-    background-color: #bebebec5;
     left: 0;
     height: 50px;
     width: 100%;
@@ -32,6 +31,5 @@ export default {
     justify-content: center;
     align-items: center;
     z-index: 100;
-
 }
 </style>

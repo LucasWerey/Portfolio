@@ -3,13 +3,13 @@
     <div class="page">
       <div class="contenu">
         <NavBar />
-        <div class="container1">
+        <div class="section1" id="S1">
           <HomePage />
         </div>
-        <div class="container2">
+        <div class="section2" id="S2">
           <ProjectsPage />
         </div>
-        <div class="container3">
+        <div class="section3" id="S3">
           <SkillsPage />
         </div>
       </div>
@@ -36,6 +36,12 @@ export default {
     FooterBar,
     SkillsPage,
     ButtonUp,
+  },
+
+  mounted() {
+    var elementToChange = document.getElementsByTagName("body")[0];
+    elementToChange.style.cursor = "url('https://img.icons8.com/external-doodle-bomsymbols-/50/null/external-arrow-cursor-doodle-web-design-device-set-1-doodle-bomsymbols--2.png'), auto";
+
   }
 }
 </script>
@@ -57,28 +63,30 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   min-height: 100%;
-  width: 100%;
+  min-width: 100%;
   margin: 0;
 }
+
 
 .page {
   display: flex;
   flex-direction: column;
+  min-width: 100vw;
 
 }
 
-.container1 {
+.section1 {
   width: 100%;
   height: 100vh;
 }
 
-.container2 {
+.section2 {
   width: 100%;
   height: 100vh;
   background: #FFC70026;
 }
 
-.container3 {
+.section3 {
   width: 100%;
   height: 90vh;
   background: #FDC830;
@@ -94,8 +102,4 @@ body {
   width: 0px;
   background: transparent;
 }
-
-
-  
-
 </style>

@@ -67,7 +67,9 @@ button:focus {
 .burger-bar--1 {
     -webkit-transform: translateY(-6px);
     transform: translateY(-6px);
+    
 }
+
 
 .burger-bar--2 {
     transform: scaleX(1.2);
@@ -94,7 +96,7 @@ button:focus {
 }
 
 #burger.active .burger-bar--1 {
-    transform: rotate(45deg)
+    transform: rotate(45deg);
 }
 
 #burger.active .burger-bar--2 {
@@ -102,6 +104,6 @@ button:focus {
 }
 
 #burger.active .burger-bar--3 {
-    transform: rotate(-45deg)
+    transform: rotate(-45deg);
 }
 </style>

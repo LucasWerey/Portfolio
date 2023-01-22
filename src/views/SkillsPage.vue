@@ -192,7 +192,7 @@ export default {
     border-right: rgb(0, 0, 0) 2px solid;
 }
 
-.imageSkills{
+.imageSkills {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,7 +205,7 @@ img {
 }
 
 img:hover {
-    animation-duration: 0.4s;
+    animation-duration: 0.6s;
     animation-name: logo;
     animation-iteration-count: 1;
 }
@@ -231,5 +231,16 @@ img:hover {
         transform: rotate(0deg);
     }
 
+}
+
+@media (width <=1024px) {
+    img {
+    width: 75px;
+    height: 75px;
+}
+.grid-1, .grid-2, .grid-3{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+}
 }
 </style>
