@@ -3,7 +3,7 @@
     <h1 class="title">My Projects</h1>
     <div class="grid">
       <div class="card" v-for="(card, index) in cards" :key="index">
-        <img class="card-img-top" :src="`../img/${card.image}`" :alt="card.alt">
+        <img class="card-img-top" :src="card.image" :alt="card.alt">
         <div class="card-body">
           <h2 class="body-title">{{ card.titre }}</h2>
           <p class="card-text">{{ card.text }}</p>
@@ -27,13 +27,17 @@
 </template>
 
 <script>
+import DASHBOARD from "../images/Dashboard.png";
+import FRESHCOOK from "../images/LogoFreshcook.png";
+import OMNES from "../images/OmnesSante.png";
+
 export default {
   data() {
     return {
       cards: [
-        { text: "Project to create a dashboard about the SNCF with the Data-SNCF API data", image: "Dashboard.b493d4a9.png", alt: "Image Dashboard", titre: "Dashboard SNCF", link: "https://dashboardlucaswerey.netlify.app/", stack: ["icons8-mongodb.7d4f7146.svg", "icons8-express-js.cc24394d.svg", "icons8-react.098ccd82.svg", "icons8-node-js.26176163.svg"], disabled:"false" },
-        { text: "Prototyping project of a food delivery application on Figma", image: "LogoFreshcook.cc48dbc9.svg", alt: "Image Freshcook", titre: "Freshcook", link: "https://www.figma.com/proto/UjllwNPgwFAxsN9tRPEaAw/Projet-UI---Freshcook?page-id=116%3A247&node-id=118%3A1683&viewport=1007%2C264%2C0.07&scaling=scale-down&starting-point-node-id=116%3A248", stack: ["icons8-figma.5d7330fe.svg"], disabled:"false" },
-        { text: "Project for the creation of a website for medical appointments", image: "OmnesSante.8e64e231.png", alt: "OmnesSanté", titre: "Omnes Santé", link: "", stack: ["icons8-html-5.964cf5a7.svg", "icons8-css3.fdf257b7.svg", "icons8-javascript-logo.17196e9c.svg", "icons8-php-logo.6bb294f9.svg", "xml-svgrepo-com.1b6818d9.svg"], disabled:"disabled" }
+        { text: "Project to create a dashboard about the SNCF with the Data-SNCF API data", image: DASHBOARD, alt: "Image Dashboard", titre: "Dashboard SNCF", link: "https://dashboardlucaswerey.netlify.app/", stack: ["icons8-mongodb.7d4f7146.svg", "icons8-express-js.cc24394d.svg", "icons8-react.098ccd82.svg", "icons8-node-js.26176163.svg"], disabled:"false" },
+        { text: "Prototyping project of a food delivery application on Figma", image: FRESHCOOK, alt: "Image Freshcook", titre: "Freshcook", link: "https://www.figma.com/proto/UjllwNPgwFAxsN9tRPEaAw/Projet-UI---Freshcook?page-id=116%3A247&node-id=118%3A1683&viewport=1007%2C264%2C0.07&scaling=scale-down&starting-point-node-id=116%3A248", stack: ["icons8-figma.5d7330fe.svg"], disabled:"false" },
+        { text: "Project for the creation of a website for medical appointments", image: OMNES, alt: "OmnesSanté", titre: "Omnes Santé", link: "", stack: ["icons8-html-5.964cf5a7.svg", "icons8-css3.fdf257b7.svg", "icons8-javascript-logo.17196e9c.svg", "icons8-php-logo.6bb294f9.svg", "xml-svgrepo-com.1b6818d9.svg"], disabled:"disabled" }
       ]
     }
   }
