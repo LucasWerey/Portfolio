@@ -18,7 +18,7 @@
             </div>
             <div v-if="grid === 1" :class="gridClass" class="grid-container">
                 <div v-for="image in front" :key="image.src" class="imageSkills">
-                    <img :src="`../img/${image.src}`" :alt="image.alt" />
+                    <img :src="image.src" :alt="image.alt" />
                 </div>
             </div>
             <div v-if="grid === 2" :class="gridClass" class="grid-container">
@@ -38,11 +38,12 @@
 
 
 <script>
+import HTML from "../images/icons8-html-5.svg";
 export default {
     data() {
         return {
             front: [
-                { src: "icons8-html-5.964cf5a7.svg", alt: "html5" },
+                { src: HTML, alt: "html5" },
                 { src: "icons8-css3.fdf257b7.svg", alt: "css3" },
                 { src: "icons8-javascript-logo.17196e9c.svg", alt: "js" },
                 { src: "sass-lang-icon.6a0e2b1d.svg", alt: "sass" },

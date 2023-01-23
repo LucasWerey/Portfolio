@@ -41,7 +41,15 @@ export default {
   mounted() {
     var elementToChange = document.getElementsByTagName("body")[0];
     elementToChange.style.cursor = "url('https://img.icons8.com/external-doodle-bomsymbols-/50/null/external-arrow-cursor-doodle-web-design-device-set-1-doodle-bomsymbols--2.png'), auto";
+    window.addEventListener('resize', this.Resize)
+  },
 
+  methods:{
+    Resize(){
+      if(window.innerWidth < 800){
+        alert("Please use a bigger screen to see the website correctly")
+      }
+    }
   }
 }
 </script>
