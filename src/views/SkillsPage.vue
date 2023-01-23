@@ -23,12 +23,12 @@
             </div>
             <div v-if="grid === 2" :class="gridClass" class="grid-container">
                 <div v-for="image in back" :key="image.src">
-                    <img :src="`../img/${image.src}`" :alt="image.alt" />
+                    <img :src="image.src" :alt="image.alt" />
                 </div>
             </div>
             <div v-if="grid === 3" :class="gridClass" class="grid-container">
                 <div v-for="image in design" :key="image.src">
-                    <img :src="`../img/${image.src}`" :alt="image.alt" />
+                    <img :src="image.src" :alt="image.alt" />
                 </div>
             </div>
         </div>
@@ -39,33 +39,51 @@
 
 <script>
 import HTML from "../images/icons8-html-5.svg";
+import CSS from "../images/icons8-css3.svg";
+import JS from "../images/icons8-javascript-logo.svg";
+import SASS from "../images/sass-lang-icon.svg";
+import REACT from "../images/icons8-react.svg";
+import BOOTSTRAP from "../images/getbootstrap-icon.svg";
+import MATERIALUI from "../images/icons8-material-ui.svg";
+import TAILWINDCSS from "../images/tailwindcss-icon.svg";
+import PHP from "../images/icons8-php-logo.svg";
+import XML from "../images/xml-svgrepo-com.svg";
+import MYSQL from "../images/mysql-official.svg";
+import MONGODB from "../images/icons8-mongodb.svg";
+import NODEJS from "../images/icons8-node-js.svg";
+import EXPRESS from "../images/icons8-express-js.svg";
+import PHOTOSHOP from "../images/icons8-adobe-photoshop.svg";
+import INDESIGN from "../images/icons8-adobe-indesign.svg";
+import FIGMA from "../images/icons8-figma.svg";
+
+
 export default {
     data() {
         return {
             front: [
                 { src: HTML, alt: "html5" },
-                { src: "icons8-css3.fdf257b7.svg", alt: "css3" },
-                { src: "icons8-javascript-logo.17196e9c.svg", alt: "js" },
-                { src: "sass-lang-icon.6a0e2b1d.svg", alt: "sass" },
-                { src: "icons8-react.098ccd82.svg", alt: "react" },
-                { src: "getbootstrap-icon.7c1c5f73.svg", alt: "bootstrap" },
-                { src: "icons8-material-ui.ef41bf46.svg", alt: "material-ui" },
-                { src: "tailwindcss-icon.ef61db01.svg", alt: "tailwindcss" }
+                { src: CSS, alt: "css3" },
+                { src: JS, alt: "js" },
+                { src: SASS, alt: "sass" },
+                { src: REACT, alt: "react" },
+                { src: BOOTSTRAP, alt: "bootstrap" },
+                { src: MATERIALUI, alt: "material-ui" },
+                { src: TAILWINDCSS, alt: "tailwindcss" }
             ],
 
             back: [
-                { src: "icons8-php-logo.6bb294f9.svg", alt: "php" },
-                { src: "xml-svgrepo-com.1b6818d9.svg", alt: "xml" },
-                { src: "mysql-official.de99ad87.svg", alt: "mysql" },
-                { src: "icons8-mongodb.7d4f7146.svg", alt: "mongodb" },
-                { src: "icons8-node-js.26176163.svg", alt: "nodejs" },
-                { src: "icons8-express-js.cc24394d.svg", alt: "expressjs" }
+                { src: PHP, alt: "php" },
+                { src: XML, alt: "xml" },
+                { src: MYSQL, alt: "mysql" },
+                { src: MONGODB, alt: "mongodb" },
+                { src: NODEJS, alt: "nodejs" },
+                { src: EXPRESS, alt: "expressjs" }
             ],
 
             design: [
-                { src: "icons8-adobe-photoshop.99d25a13.svg", alt: "photoshop" },
-                { src: "icons8-adobe-indesign.581d6a06.svg", alt: "indesign" },
-                { src: "icons8-figma.5d7330fe.svg", alt: "figma" }
+                { src: PHOTOSHOP, alt: "photoshop" },
+                { src: INDESIGN, alt: "indesign" },
+                { src: FIGMA, alt: "figma" }
             ],
             grid: 1
         }
