@@ -3,7 +3,6 @@
         <div class="Top">
             <div class="log"><img src="../../images/logoSite.svg" alt="logo" /> </div>
             <ul class="menu">
-                <div class="menu-indicator"></div>
                 <li class="menu-item" v-for="link in links" :key="link.id">
                     <a v-on:click="scroll(link.scroll)" class="menu-link">
                         <span :id="link.id">{{ link.text }}</span>
@@ -15,8 +14,7 @@
             </div>
         </div>
         <SlideBar id="SlideBar">
-            <ul class="menu" id="MenuSlide">
-                <div class="menu-indicator"></div>
+            <ul class="menu" id="MenuSlide">       
                 <li class="menu-item" v-for="link in links" :key="link.id">
                     <a v-on:click="scroll(link.scroll)" class="menu-link">
                         <span :id="link.id">{{ link.text }}</span>
@@ -166,7 +164,7 @@ export default {
 .menu-link span {
     font-size: 2em;
     position: relative;
-}
+} 
 
 
 span.active::after {

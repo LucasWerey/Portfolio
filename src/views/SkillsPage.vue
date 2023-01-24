@@ -43,7 +43,7 @@ import CSS from "../images/icons8-css3.svg";
 import JS from "../images/icons8-javascript-logo.svg";
 import SASS from "../images/sass-lang-icon.svg";
 import REACT from "../images/icons8-react.svg";
-import BOOTSTRAP from "../images/getbootstrap-icon.svg";
+import BOOTSTRAP from "../images/icons8-bootstrap.svg";
 import MATERIALUI from "../images/icons8-material-ui.svg";
 import TAILWINDCSS from "../images/tailwindcss-icon.svg";
 import PHP from "../images/icons8-php-logo.svg";
@@ -108,7 +108,7 @@ export default {
 }
 
 .Title {
-    width: 50%;
+    width: 60%;
     height: 10%;
     display: flex;
     justify-content: start;
@@ -125,10 +125,11 @@ export default {
 }
 
 .Skills {
-    width: 50%;
+    min-width: 60%;
     height: 50%;
     display: flex;
     flex-direction: row;
+    gap:20px;
 }
 
 .buttonContainer {
