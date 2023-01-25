@@ -26,9 +26,9 @@ export default {
     position: fixed;
     left: 0;
     height: 50px;
-    width: 100%;
+    width: 90%;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     z-index: 100;
 }

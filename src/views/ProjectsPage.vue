@@ -103,6 +103,7 @@ img {
   width: 100%;
 }
 
+
 .project{
   width: 100%;
   height : 80%;

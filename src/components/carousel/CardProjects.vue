@@ -9,6 +9,11 @@
         <a :href="info.link" :class="`card-btn ${info.disabled}`" target="_blank" aria-label="Click me it's cool !">
           <p>Discover !</p>
         </a>
+    <div class="footer">
+      <div class="footer-stacks">
+        <img v-for="stack in info.stack" :src="`../img/${stack}`" alt="stack" :key="stack" class="stacks">
+      </div>
+    </div>
     </div>
     <div class="aside">
       <div class="aside-stacks">
@@ -72,11 +77,28 @@ img {
   align-items: flex-start;
 }
 
+@media (max-width: 768px) {
+  .card-body {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .card-title {
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 1px;
   color: #ffff;
+}
+
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 20px;
+  }
 }
 
 .card-text {
@@ -87,6 +109,39 @@ img {
   height:20%;
 }
 
+@media (max-width: 768px) {
+  .card-text {
+    font-size: 12px;
+  }
+}
+
+.footer{
+  visibility: none;
+  display:none;
+}
+.footer-stacks{
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+
+  .footer{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    margin:2%;
+  }
+  .footer-stacks{
+    visibility: visible;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin:2%;
+  }
+}
 .aside {
   height: 80%;
   width: 20%;
@@ -97,6 +152,11 @@ img {
   margin: 1%;
 }
 
+@media (max-width: 768px) {
+  .aside {
+    display: none;
+  }
+}
 .aside-stacks {
   height: 100%;
   width: 100%;
@@ -113,6 +173,13 @@ img {
   object-fit: contain;
 }
 
+@media (max-width: 768px) {
+  .stacks {
+    height: 10%;
+    width: 10%;
+  }
+}
+
 .card-btn {
   text-decoration: none;
   color: black;
@@ -126,6 +193,15 @@ img {
   border-radius: 20px 20px 0px 0px;
   cursor: pointer;
   transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .card-btn {
+    font-size: 12px;
+    padding: 0;
+    border-radius: 20px;
+    padding:2px;
+  }
 }
 
 .card-btn:hover,

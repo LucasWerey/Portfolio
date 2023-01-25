@@ -55,6 +55,17 @@ export default {
   width: 100%;
   padding-right: 20px;
 }
+@media (max-width: 800px) {
+  .text {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .text {
+    font-size: 20px;
+  }
+}
 
 .image {
   width: 80%;
