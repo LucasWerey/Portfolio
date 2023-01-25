@@ -118,7 +118,9 @@ export default {
     position: fixed;
     overflow: hidden;
     top: 0;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     z-index: 9999;
 }
@@ -128,6 +130,7 @@ export default {
     display: flex;
     justify-content: space-between;
     position: relative;
+    width: 85%;
     height: auto;
 }
 

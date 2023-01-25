@@ -22,16 +22,17 @@
                 </div>
             </div>
             <div v-if="grid === 2" :class="gridClass" class="grid-container">
-                <div v-for="image in back" :key="image.src">
+                <div v-for="image in back" :key="image.src" class="imageSkills">
                     <img :src="image.src" :alt="image.alt" />
                 </div>
             </div>
             <div v-if="grid === 3" :class="gridClass" class="grid-container">
-                <div v-for="image in design" :key="image.src">
+                <div v-for="image in design" :key="image.src" class="imageSkills">
                     <img :src="image.src" :alt="image.alt" />
                 </div>
             </div>
         </div>
+        
     </div>
 </template>
 
@@ -108,7 +109,7 @@ export default {
 }
 
 .Title {
-    width: 60%;
+    width: 70%;
     height: 10%;
     display: flex;
     justify-content: start;
@@ -125,7 +126,7 @@ export default {
 }
 
 .Skills {
-    min-width: 60%;
+    min-width: 70%;
     height: 50%;
     display: flex;
     flex-direction: row;
@@ -215,7 +216,7 @@ export default {
 .imageSkills {
     display: flex;
     justify-content: center;
-    align-items: center;
+    
 }
 
 img {
@@ -263,4 +264,6 @@ img:hover {
     grid-template-rows: auto;
 }
 }
+
+
 </style>
